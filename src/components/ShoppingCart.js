@@ -9,11 +9,11 @@ const ShoppingCart = () => {
       </h2>
       <div className="container bg-BG-Gray m-10">
         <div className="flex flex-row">
-          <div className="flex item-center justify-start items-center">
-            <img src={img1} alt="productOne" style={{ width: "115px" }} />
+          <div className="flex item-center justify-start items-center w-2/3">
+            <img src={img1} alt="productOne" className="h-36" />
             <h5 className="text-xl font-bold px-7">iPhone 11 128GB Black</h5>
           </div>
-          <div></div>
+          <div className="flex item-center justify-start items-center w-1/3"></div>
         </div>
       </div>
     </div>
