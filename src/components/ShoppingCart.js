@@ -1,4 +1,5 @@
 import React from "react";
+import img1 from "../images/product-1.png";
 
 const ShoppingCart = () => {
   return (
@@ -7,7 +8,13 @@ const ShoppingCart = () => {
         This is a Shopping Cart using Tailwind
       </h2>
       <div className="container bg-BG-Gray m-10">
-        <h2>Hi</h2>
+        <div className="flex flex-row">
+          <div className="flex item-center justify-start items-center">
+            <img src={img1} alt="productOne" style={{ width: "115px" }} />
+            <h5 className="text-xl font-bold px-7">iPhone 11 128GB Black</h5>
+          </div>
+          <div></div>
+        </div>
       </div>
     </div>
   );
