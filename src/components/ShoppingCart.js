@@ -12,7 +12,7 @@ const ShoppingCart = () => {
   return (
     <div className="container m-auto">
       <h2 className="text-3xl text-lime-600 text-center font-bold my-8">
-        This is a Shopping Cart using Tailwind
+        Shopping Cart using Redux
       </h2>
       <div className="bg-BG-Gray p-12 my-9">
         <div className="container bg-white m-auto rounded-md">
@@ -94,18 +94,17 @@ const ShoppingCart = () => {
           </div>
         </div>
 
-        <div className="container bg-white m-auto rounded-md my-2">
-          <div className="md:flex md:flex-row px-4 py-3 text-xl font-medium">
-            <div className="xl:w-2/3 md:w-1/2 ">
-              <h5>Subtotal: </h5>
-              <h5>Tax:</h5>
-              <h5>Total:</h5>
-            </div>
-            <div className="xl:w-1/3 md:w-1/2">
-              <h5>$1,278</h5>
-              <h5>$0</h5>
-              <h5>$1,278</h5>
-            </div>
+        <div className="container m-auto rounded-md my-2 flex justify-end">
+          <div className="px-4 py-3 text-xl font-medium bg-white w-72">
+            <h5>
+              Subtotal: <span className="ml-2">$ 1235</span>
+            </h5>
+            <h5>
+              Tax:<span className="ml-2">$ 1335</span>
+            </h5>
+            <h5>
+              Total:<span className="ml-2">$ 1235</span>
+            </h5>
           </div>
         </div>
       </div>
