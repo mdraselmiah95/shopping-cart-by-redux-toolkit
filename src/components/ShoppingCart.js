@@ -95,7 +95,7 @@ const ShoppingCart = () => {
         </div>
 
         <div className="container bg-white m-auto rounded-md my-2">
-          <div className="md:flex md:flex-row px-4 py-3">
+          <div className="md:flex md:flex-row px-4 py-3 text-xl font-medium">
             <div className="xl:w-2/3 md:w-1/2 ">
               <h5>Subtotal: </h5>
               <h5>Tax:</h5>
