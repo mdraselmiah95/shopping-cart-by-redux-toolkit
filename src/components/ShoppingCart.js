@@ -1,10 +1,13 @@
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { useDispatch } from "react-redux";
 import mack from "../images/mack.png";
 import img1 from "../images/product-1.png";
 import img2 from "../images/product-2.png";
 import remove from "../images/remove.png";
+
+import { add } from "../redux/slices/cartSlice";
 
 const products = [
   {
@@ -27,6 +30,9 @@ const products = [
 const ShoppingCart = () => {
   const PlusSquare = <FontAwesomeIcon icon={faPlus} />;
   const PlusMinus = <FontAwesomeIcon icon={faMinus} />;
+
+  const dispatch = useDispatch();
+
   return (
     <div className="container m-auto">
       <h2 className="text-3xl text-lime-600 text-center font-bold my-8">
@@ -41,7 +47,13 @@ const ShoppingCart = () => {
                 <h5 className="text-xl font-bold px-7">{item.title}</h5>
               </div>
               <div className="flex item-center justify-start items-center xl:w-1/3 md:w-1/2">
-                <button className="hover:bg-zinc-300 rounded-md hover:text-emerald-700 p-2">
+                <button
+                  onClick={() => dispatch(add(item))}
+                  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                >
+                  Add Product
+                </button>
+                {/* <button className="hover:bg-zinc-300 rounded-md hover:text-emerald-700 p-2">
                   {PlusSquare}
                 </button>
                 <input
@@ -56,7 +68,7 @@ const ShoppingCart = () => {
                 <h5 className="text-lg font-bold md:px-10 px-4">
                   $ {item.price}
                 </h5>
-                <img src={remove} alt="remove" className="cursor-pointer" />
+                <img src={remove} alt="remove" className="cursor-pointer" /> */}
               </div>
             </div>
           </div>
