@@ -8,12 +8,23 @@ const cartSlice = createSlice({
 
   reducers: {
     add(state, { payload }) {
-      console.log(payload);
+      const inCart = state.cart.find((item) => item.id === payload.id);
+      if (inCart) {
+        state.cart = [...payload];
+      } else {
+        state.cart.push(payload);
+      }
+    },
+    remove: (state, action) => {
+      state.cart.splice(
+        state.cart.findIndex((a) => a.id === action.payload),
+        1
+      );
     },
   },
 });
 
-export const { add } = cartSlice.actions;
+export const { add, remove } = cartSlice.actions;
 
 export default cartSlice.reducer;
 
