@@ -15,9 +15,9 @@ const cartSlice = createSlice({
         state.cart.push(payload);
       }
     },
-    remove: (state, action) => {
+    remove: (state, { payload }) => {
       state.cart.splice(
-        state.cart.findIndex((a) => a.id === action.payload),
+        state.cart.findIndex((a) => a.id === payload),
         1
       );
     },

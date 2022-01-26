@@ -31,7 +31,6 @@ const Cart = ({ item }) => {
             </button>
           ) : (
             <>
-              {" "}
               <button className="hover:bg-zinc-300 rounded-md hover:text-emerald-700 p-2">
                 {PlusSquare}
               </button>
